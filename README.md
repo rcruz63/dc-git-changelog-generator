@@ -13,7 +13,7 @@ Its a part of the Docker Command series
 Execute the following within your repository folder:
 
 - Using Bash: `cd [git-repository-dir]; ./entrypoint.sh > CHANGELOG.md`
-- Using Docker: `cd [git-repository-dir]; docker run --rm -v $(pwd):/workspace kairops/dc-git-changelog-generator > CHANGELOG.md`
+- Using Docker: `cd [git-repository-dir]; docker run --rm -v $(pwd):/workspace tpbtools/dc-git-changelog-generator > CHANGELOG.md`
 - Using docker-command-launcher: `kd git-changelog-generator [git-repository-dir] > CHANGELOG.md`
 
 If you use a repository tag as a parameter then you get the thangelog only for that tag. As an example:
