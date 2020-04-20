@@ -1,7 +1,3 @@
-# DEPRECATED
-
-Please visit https://github.com/tpbtools/dc-git-changelog-generator
-
 # Docker Command: GIT Changelog Generator
 
 Simply Git Changelog Generator writen in BASH
