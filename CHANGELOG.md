@@ -1,5 +1,22 @@
 # Changelog
 
+## v3.0.1 (2021-03-28)
+
+### Changes
+
+#### Build
+
+* Update Auto Release Log adding v3.0.1 info with JPL ([427b6ec](https://github.com/ayudadigital/dc-git-changelog-generator/commit/427b6ec))
+* Use jpl v6.2.0 ([80add8f](https://github.com/ayudadigital/dc-git-changelog-generator/commit/80add8f))
+
+#### Docs
+
+* Generate v3.0.0 changelog with JPL ([6718961](https://github.com/ayudadigital/dc-git-changelog-generator/commit/6718961))
+
+### Authors
+
+* Pedro Amador
+
 ## v3.0.0 (2020-04-24)
 
 ### Changes
