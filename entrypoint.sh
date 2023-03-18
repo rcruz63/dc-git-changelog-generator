@@ -74,7 +74,7 @@ function getTypeByNumber() {
         8) type='Deprecated';;
         9) type='Misc';;
     esac
-    echo -n $type
+    echo -n "$type"
 }
 
 function buildChangelogBetweenTags () {
@@ -129,7 +129,7 @@ function buildChangelogBetweenTags () {
             if [ "$number" -eq 9 ]; then
                 message=$(echo "$commit"|awk '{ print substr($0, index($0,$2)) }')
             fi
-            changelog[$number]="${changelog[$number]}* $message ([${hash}](${remoteURL}/${commitWord}/${hash}))\n"
+            changelog[number]="${changelog[number]}* $message ([${hash}](${remoteURL}/${commitWord}/${hash}))\n"
             commitCount=$((commitCount+1))
         fi
     done
@@ -139,8 +139,8 @@ function buildChangelogBetweenTags () {
         for number in $(seq 0 9)
         do
             type=$(getTypeByNumber "$number")
-            if [ "${changelog[$number]}" ]; then
-                echo -e "#### $type\n\n${changelog[$number]}"
+            if [ "${changelog[number]}" ]; then
+                echo -e "#### $type\n\n${changelog[number]}"
             fi
         done
         echo -e "### Authors\n"
