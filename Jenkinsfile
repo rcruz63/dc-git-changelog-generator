@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('github.com/ayudadigital/jenkins-pipeline-library@v6.2.0') _
+@Library('jenkins-pipeline-library') _
 
 // Initialize global config
 cfg = jplConfig('dc-git-changelog-generator', 'bash', '', [email: env.CI_NOTIFY_EMAIL_TARGETS])
@@ -14,7 +14,7 @@ def buildAndPublishDockerImage(nextReleaseNumber = "") {
     if (nextReleaseNumber == "") {
         nextReleaseNumber = jplGetNextReleaseNumber(cfg).substring(1)
     }
-    docker.withRegistry("", 'docker-token') {
+    docker.withRegistry("https://ghcr.io", 'docker-jenkins-ayudadigital') {
         def customImage = docker.build("${env.DOCKER_ORGANIZATION}/${cfg.projectName}:${nextReleaseNumber}", "--pull --no-cache .")
         customImage.push()
         if (nextReleaseNumber != "beta") {
