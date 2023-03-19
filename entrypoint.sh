@@ -58,7 +58,7 @@ function getNumberByType() {
         'Deprecated:') number=8;;
         *) number=9;;
     esac
-    echo -n $number
+    echo -n "$number"
 }
 
 function getTypeByNumber() {
@@ -96,8 +96,7 @@ function buildChangelogBetweenTags () {
         return
     fi
 
-    # Initioalizacion
-    OLDIFS="$IFS"
+    # Initialization
     IFS=$'\n' # bash specific
     commitWord="commit"
     commitList=$(git log "${tagFrom}${tagRange}${tagTo}" --no-merges --pretty=format:"%h %s")
@@ -147,7 +146,6 @@ function buildChangelogBetweenTags () {
         printf '* %s\n' "${authorList[@]}"
         echo
     fi
-    IFS="$OLDIFS"
 }
 
 # Use to get only the changelog of one release
@@ -159,7 +157,7 @@ remoteURL=${remoteURL%".git"}
 
 # Build the changelog
 echo -e "# Changelog\n"
-lastTag=$(git describe --abbrev=0 2> /dev/null || true)
+lastTag=$(git tag --sort=-taggerdate|head -n1)
 unreleaseFlag=false
 buildChangelogBetweenTags "$lastTag" HEAD
 currentTag=""
