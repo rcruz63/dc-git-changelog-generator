@@ -1,5 +1,25 @@
 # Changelog
 
+## v3.1.0 (2023-03-19)
+
+### Changes
+
+#### Upgrade
+
+* Fix colon (:) character bug ([a04707f](https://github.com:ayudadigital/dc-git-changelog-generator/commit/a04707f))
+
+#### Build
+
+* Update Auto Release Log adding v3.1.0 info with JPL ([325a44d](https://github.com:ayudadigital/dc-git-changelog-generator/commit/325a44d))
+
+#### Docs
+
+* Generate v3.0.3 changelog with JPL ([5e5a9f9](https://github.com:ayudadigital/dc-git-changelog-generator/commit/5e5a9f9))
+
+### Authors
+
+* Pedro Amador
+
 ## v3.0.3 (2023-03-19)
 
 ### Changes
