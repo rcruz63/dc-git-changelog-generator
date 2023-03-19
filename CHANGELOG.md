@@ -1,5 +1,25 @@
 # Changelog
 
+## v3.0.3 (2023-03-19)
+
+### Changes
+
+#### Update
+
+* Change last tag calculation ([c3fea6e](https://github.com:ayudadigital/dc-git-changelog-generator/commit/c3fea6e))
+
+#### Build
+
+* Update Auto Release Log adding v3.0.3 info with JPL ([a55a207](https://github.com:ayudadigital/dc-git-changelog-generator/commit/a55a207))
+
+#### Docs
+
+* Generate v3.0.2 changelog with JPL ([7aa1cd2](https://github.com:ayudadigital/dc-git-changelog-generator/commit/7aa1cd2))
+
+### Authors
+
+* Pedro Amador
+
 ## v3.0.2 (2023-03-18)
 
 ### Changes
