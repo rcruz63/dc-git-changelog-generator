@@ -152,7 +152,7 @@ function buildChangelogBetweenTags () {
 releaseTagToShow="$1"
 
 # Get remote URL
-remoteURL="https://$(git ls-remote --get-url|sed 's|.*//||; s|.*@||; s|:.[1-65535]*\/|\/|')"
+remoteURL="https://$(git ls-remote --get-url|sed -e 's|.*//||; s|.*@||; s|:.[1-65535]*\/|\/|' -e 's|^bitbucket.org:|bitbucket.org/|g' -e 's|^github.com:|github.com/|g' -e 's|^gitlab.com:|gitlab.com/|g')"
 remoteURL=${remoteURL%".git"}
 
 # Build the changelog
