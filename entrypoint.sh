@@ -155,6 +155,9 @@ releaseTagToShow="$1"
 remoteURL="https://$(git ls-remote --get-url|sed -e 's|.*//||; s|.*@||; s|:.[1-65535]*\/|\/|' -e 's|^bitbucket.org:|bitbucket.org/|g' -e 's|^github.com:|github.com/|g' -e 's|^gitlab.com:|gitlab.com/|g')"
 remoteURL=${remoteURL%".git"}
 
+# GitHub actions check
+[ "$GITHUB_ACTIONS" == "true" ] && OUTFILE="CHANGELOG.md" || OUTFILE="/dev/null"
+
 # Build the changelog
 echo -e "# Changelog\n"
 lastTag=$(git tag --sort=-taggerdate|head -n1||true)
@@ -168,9 +171,6 @@ do
     [[ "$nextTag" == "" ]] || buildChangelogBetweenTags "$currentTag" "$nextTag"  | tee "$OUTFILE"
     nextTag="$currentTag"
 done
-
-# GitHub actions check
-[ "$GITHUB_ACTIONS" == "true" ] && OUTFILE="CHANGELOG.md" || OUTFILE=""
 
 # First release check
 if [ "$currentTag" != "" ]; then
