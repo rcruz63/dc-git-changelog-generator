@@ -2,6 +2,8 @@
 
 Simply Git Changelog Generator, see the [README](README.md) file for details
 
+The "CHANGELOG.md" file will be generated in the call
+
 ## Inputs
 
 ## `tag`

@@ -159,18 +159,18 @@ remoteURL=${remoteURL%".git"}
 echo -e "# Changelog\n"
 lastTag=$(git tag --sort=-taggerdate|head -n1||true)
 unreleaseFlag=false
-buildChangelogBetweenTags "$lastTag" HEAD
+buildChangelogBetweenTags "$lastTag" HEAD | tee "$OUTFILE"
 currentTag=""
 nextTag=""
 tagList=$(git tag -l --sort=-v:refname)
 for currentTag in $tagList
 do
-    [[ "$nextTag" == "" ]] || buildChangelogBetweenTags "$currentTag" "$nextTag"
+    [[ "$nextTag" == "" ]] || buildChangelogBetweenTags "$currentTag" "$nextTag"  | tee "$OUTFILE"
     nextTag="$currentTag"
 done
 
 # GitHub actions check
-[ "$GITHUB_OUTPUT" ] && OUTFILE="CHANGELOG.md" || OUTFILE=""
+[ "$GITHUB_ACTIONS" == "true" ] && OUTFILE="CHANGELOG.md" || OUTFILE=""
 
 # First release check
 if [ "$currentTag" != "" ]; then
