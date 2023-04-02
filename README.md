@@ -11,6 +11,7 @@ Execute the following within your repository folder:
 - Using Bash: `cd [git-repository-dir]; ./entrypoint.sh > CHANGELOG.md`
 - Using Docker: `cd [git-repository-dir]; docker run --rm -v $(pwd):/workspace ayudadigital/dc-git-changelog-generator > CHANGELOG.md`
 - Using docker-command-launcher: `kd git-changelog-generator [git-repository-dir] > CHANGELOG.md`
+- Using Github Actions: Follow [Github Actions Readme](README.action.md)
 
 If you use a repository tag as a parameter then you get the thangelog only for that tag. As an example:
 

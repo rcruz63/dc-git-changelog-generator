@@ -1,0 +1,12 @@
+name: 'GIT Changelog Generator'
+description: 'Ayudadigital dc-git-changelog-generator Action'
+inputs:
+  tag:
+    description: 'Tag to be used in the generated changelog'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.tag }}
