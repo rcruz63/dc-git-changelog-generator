@@ -1,5 +1,26 @@
 # Changelog
 
+## v4.0.1 (2023-04-02)
+
+### Changes
+
+#### Fix
+
+* Generate changelog without overriding it in GitHub Actions ([260fdf2](https://github.com/ayudadigital/dc-git-changelog-generator/commit/260fdf2))
+
+#### Build
+
+* Update Auto Release Log adding v4.0.1 info with JPL ([3b11746](https://github.com/ayudadigital/dc-git-changelog-generator/commit/3b11746))
+
+#### Docs
+
+* Review GitHub Actions doc file ([bf8baf0](https://github.com/ayudadigital/dc-git-changelog-generator/commit/bf8baf0))
+* Generate v4.0.0 changelog with JPL ([e06fab1](https://github.com/ayudadigital/dc-git-changelog-generator/commit/e06fab1))
+
+### Authors
+
+* Pedro Amador
+
 ## v4.0.0 (2023-04-02)
 
 ### Changes
