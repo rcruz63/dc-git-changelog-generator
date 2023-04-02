@@ -6,7 +6,7 @@ Simply Git Changelog Generator, see the [README](README.md) file for details
 
 ## `tag`
 
-**Optional** Tag to be used in the generated changelog. Default empty string `""` to calculate changelog of all repository.
+**Optional** Tag to be used in the generated changelog. Default empty string `""` to generate changelog of all commits in the.
 
 ## Outputs
 

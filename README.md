@@ -9,7 +9,7 @@ Its a part of the Docker Command series
 Execute the following within your repository folder:
 
 - Using Bash: `cd [git-repository-dir]; ./entrypoint.sh > CHANGELOG.md`
-- Using Docker: `cd [git-repository-dir]; docker run --rm -v $(pwd):/workspace ayudadigital/dc-git-changelog-generator > CHANGELOG.md`
+- Using Docker: `cd [git-repository-dir]; docker run --rm -v $(pwd):/github/workspace ghcr.io/ayudadigital/dc-git-changelog-generator > CHANGELOG.md`
 - Using docker-command-launcher: `kd git-changelog-generator [git-repository-dir] > CHANGELOG.md`
 - Using Github Actions: Follow [Github Actions Readme](README.action.md)
 
