@@ -174,6 +174,6 @@ done
 
 # First release check
 if [ "$currentTag" != "" ]; then
-    buildChangelogBetweenTags "" "$currentTag" | tee $OUTFILE
+    buildChangelogBetweenTags "" "$currentTag" | tee "$OUTFILE"
 fi
 echo_debug "end"
