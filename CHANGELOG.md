@@ -1,5 +1,40 @@
 # Changelog
 
+## v4.0.0 (2023-04-02)
+
+### Changes
+
+#### Breaking
+
+* Generate CHANGELOG.md file in GitHub Actions execution ([1fdfe83](https://github.com/ayudadigital/dc-git-changelog-generator/commit/1fdfe83))
+* Change image workspace folder and volume ([e7b14d0](https://github.com/ayudadigital/dc-git-changelog-generator/commit/e7b14d0))
+
+#### New
+
+* Add GitHub Actions compatibility ([5d5ca36](https://github.com/ayudadigital/dc-git-changelog-generator/commit/5d5ca36))
+
+#### Update
+
+* Output to CHANGELOG.md file inside GitHub Actions run ([b1efc77](https://github.com/ayudadigital/dc-git-changelog-generator/commit/b1efc77))
+* Add ghcr metadata info ([90d3dca](https://github.com/ayudadigital/dc-git-changelog-generator/commit/90d3dca))
+
+#### Fix
+
+* GitHub Actions check ([9e7eb2d](https://github.com/ayudadigital/dc-git-changelog-generator/commit/9e7eb2d))
+* Resolve shellcheck issue ([2d40302](https://github.com/ayudadigital/dc-git-changelog-generator/commit/2d40302))
+
+#### Build
+
+* Update Auto Release Log adding v4.0.0 info with JPL ([fd1957d](https://github.com/ayudadigital/dc-git-changelog-generator/commit/fd1957d))
+
+#### Docs
+
+* Generate v3.1.1 changelog with JPL ([f233554](https://github.com/ayudadigital/dc-git-changelog-generator/commit/f233554))
+
+### Authors
+
+* Pedro Amador
+
 ## v3.1.1 (2023-03-19)
 
 ### Changes
