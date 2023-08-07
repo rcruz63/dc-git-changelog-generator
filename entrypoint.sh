@@ -17,6 +17,9 @@
 
 set -eo pipefail
 
+# NEXT: count lines of code
+# cloc -- cloc --quiet --timeout 0 .
+
 # Global variables
 releaseTagToShow=""
 remoteURL=""
@@ -78,7 +81,7 @@ function getTypeByNumber() {
 }
 
 function buildChangelogBetweenTags () {
-    local tagFrom tagTo tagRange tagDate commitWord commitList commitCount changelog commit hash type message number changelogTitle
+    local tagFrom tagTo tagRange tagDate commitList commitCount changelog commit hash type message number changelogTitle
 
     # Parameters
     tagFrom=$1
@@ -98,7 +101,6 @@ function buildChangelogBetweenTags () {
 
     # Initialization
     IFS=$'\n' # bash specific
-    commitWord="commit"
     commitList=$(git log "${tagFrom}${tagRange}${tagTo}" --no-merges --pretty=format:"%h %s")
     commitCount=0
     changelog=()
@@ -152,8 +154,9 @@ function buildChangelogBetweenTags () {
 releaseTagToShow="$1"
 
 # Get remote URL
-remoteURL="https://$(git ls-remote --get-url|sed -e 's|.*//||; s|.*@||; s|:.[1-65535]*\/|\/|' -e 's|^bitbucket.org:|bitbucket.org/|g' -e 's|^github.com:|github.com/|g' -e 's|^gitlab.com:|gitlab.com/|g')"
+remoteURL="https://$(git ls-remote --get-url|sed -e 's|.*//||; s|.*@||; s|:.[1-65535]*\/|\/|' -e 's|:|/|')"
 remoteURL=${remoteURL%".git"}
+[ "${remoteURL:8:13}" == "bitbucket.org" ] && commitWord="commits" || commitWord="commit"
 
 # GitHub actions check
 [ "$GITHUB_ACTIONS" == "true" ] && OUTFILE="CHANGELOG.md" || OUTFILE="/dev/null"
@@ -172,7 +175,7 @@ do
     nextTag="$currentTag"
 done
 
-# First release check
+# First release check
 if [ "$currentTag" != "" ]; then
     buildChangelogBetweenTags "" "$currentTag" | tee -a "$OUTFILE"
 fi
