@@ -1,5 +1,26 @@
 # Changelog
 
+## v4.0.4 (2023-09-28)
+
+### Changes
+
+#### Update
+
+* Use git semver sort instead taggerdate ([ae0055a](https://github.com/ayudadigital/dc-git-changelog-generator/commit/ae0055a))
+* Add bitbucket commit URL compatibility ([deec29e](https://github.com/ayudadigital/dc-git-changelog-generator/commit/deec29e))
+
+#### Build
+
+* Update Auto Release Log adding v4.0.4 info with JPL ([f6e1200](https://github.com/ayudadigital/dc-git-changelog-generator/commit/f6e1200))
+
+#### Docs
+
+* Generate v4.0.3 changelog with JPL ([2a2e411](https://github.com/ayudadigital/dc-git-changelog-generator/commit/2a2e411))
+
+### Authors
+
+* Pedro Amador
+
 ## v4.0.3 (2023-08-07)
 
 ### Changes
