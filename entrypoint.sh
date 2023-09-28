@@ -163,7 +163,7 @@ remoteURL=${remoteURL%".git"}
 
 # Build the changelog
 echo -e "# Changelog\n" | tee "$OUTFILE"
-lastTag=$(git tag --sort=-taggerdate|head -n1||true)
+lastTag=$(git tag -l --sort=-v:refname|head -n1||true)
 unreleaseFlag=false
 buildChangelogBetweenTags "$lastTag" HEAD | tee -a "$OUTFILE"
 currentTag=""
