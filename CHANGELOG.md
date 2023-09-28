@@ -1,5 +1,21 @@
 # Changelog
 
+## v4.0.3 (2023-08-07)
+
+### Changes
+
+#### Build
+
+* Update Auto Release Log adding v4.0.3 info with JPL ([47d7da0](https://github.com/ayudadigital/dc-git-changelog-generator/commit/47d7da0))
+
+#### Docs
+
+* Generate v4.0.2 changelog with JPL ([c32ed47](https://github.com/ayudadigital/dc-git-changelog-generator/commit/c32ed47))
+
+### Authors
+
+* 
+
 ## v4.0.2 (2023-08-07)
 
 ### Changes
