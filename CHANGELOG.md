@@ -1,5 +1,25 @@
 # Changelog
 
+## v4.0.5 (2023-10-08)
+
+### Changes
+
+#### Update
+
+* Use alpine 3 base image, without minor / patch version ([f6f3ada](https://github.com/ayudadigital/dc-git-changelog-generator/commit/f6f3ada))
+
+#### Build
+
+* Update Auto Release Log adding v4.0.5 info with JPL ([af296d8](https://github.com/ayudadigital/dc-git-changelog-generator/commit/af296d8))
+
+#### Docs
+
+* Generate v4.0.4 changelog with JPL ([514e225](https://github.com/ayudadigital/dc-git-changelog-generator/commit/514e225))
+
+### Authors
+
+* Pedro Amador
+
 ## v4.0.4 (2023-09-28)
 
 ### Changes
