@@ -1,4 +1,4 @@
-FROM alpine:3.17.3
+FROM alpine:3
 
 LABEL org.opencontainers.image.source=https://github.com/ayudadigital/dc-git-changelog-generator
 LABEL org.opencontainers.image.description="Docker Command - GIT Changelog Generator"
