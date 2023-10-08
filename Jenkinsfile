@@ -3,7 +3,7 @@
 @Library('jenkins-pipeline-library') _
 
 // Initialize global config
-cfg = jplConfig('dc-git-changelog-generator', 'bash', '', [email: env.CI_NOTIFY_EMAIL_TARGETS])
+cfg = jplConfig('dc-git-changelog-generator', 'bash', '', [email: env.CI_NOTIFY_EMAIL_TARGETS], 'main')
 
 /**
  * Build and publish docker images
