@@ -7,7 +7,8 @@ LABEL org.opencontainers.image.licenses=MIT
 RUN apk add --no-cache git bash
 
 ADD entrypoint.sh /entrypoint.sh
-RUN git config --global --add safe.directory /github/workspace
+RUN git config --global --add safe.directory /github/workspace && \
+    cp /root/.gitconfig /
 
 VOLUME ["/github/workspace"]
 WORKDIR /github/workspace
