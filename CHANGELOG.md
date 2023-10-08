@@ -1,5 +1,23 @@
 # Changelog
 
+## v4.0.6 (2023-10-08)
+
+### Changes
+
+#### Build
+
+* Update Auto Release Log adding v4.0.6 info with JPL ([721ba8a](https://github.com/ayudadigital/dc-git-changelog-generator/commit/721ba8a))
+* Change master branch references to main ([54e0901](https://github.com/ayudadigital/dc-git-changelog-generator/commit/54e0901))
+* Configure global git config for all users ([2b41959](https://github.com/ayudadigital/dc-git-changelog-generator/commit/2b41959))
+
+#### Docs
+
+* Generate v4.0.5 changelog with JPL ([f6f5abd](https://github.com/ayudadigital/dc-git-changelog-generator/commit/f6f5abd))
+
+### Authors
+
+* Pedro Amador
+
 ## v4.0.5 (2023-10-08)
 
 ### Changes
